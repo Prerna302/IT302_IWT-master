@@ -1,0 +1,59 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            <!--<label>Input</label>-->
+            <input id="input" type="text" name="cel" onchange="convert()">
+            
+            <!--<label>unit</label>-->
+            <select id="inop" onchange="convert()">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+            
+            <!--<label>Output</label>-->
+            <input id="output" type="text" name="cel2">
+            
+            <!--<label>unit</label>-->
+            <select id="outop" onchange="convert()">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+        </form>
+        <button id="sub"onclick="convert()">Convert</button>
+        <script>
+            var en=document.getElementById("sub");
+            function convert(){
+                input=parseInt(document.forms[0].elements[0].value);
+                inop=document.forms[0].elements[1].value;
+                outop=document.forms[0].elements[3].value;
+                if(inop=="C" && outop=="K"){
+                    res=input+273;
+                }
+                else if(inop=="C" && outop=="F"){
+                    res=input*(9/5)+32;
+                }
+                else if(inop=="F" && outop=="F")
+                {
+                    res=input;
+                }
+                else if(inop=="F" && outop=="C"){
+                    res=(input-32)*(5/9);
+                }
+                else if(inop=="F" && outop=="K"){
+                    res=(input-32)*(5/9)+273;
+                }
+                else{
+                    res=input;
+                }
+                (document.forms[0].elements[2].value)=res;
+               
+            
+            }
+        </script>
+    </body>
+</html>

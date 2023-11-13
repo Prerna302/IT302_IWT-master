@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <title>Q21</title>
+        <style>
+            nav{
+                display: flex;
+                align-items: flex-end;
+               
+                
+            }
+            .div1{
+                background-image: linear-gradient(to left,rgba(50  ,105,300,0.1),rgba(50,100,330,0.3));
+                height: 25%;
+                width: 100%;
+            }
+            .nav1{
+                float:right;
+                
+                
+            }
+            .nav2{
+                height: 15%;
+                margin-top: 0;
+                padding-top: 0;
+                background-color: rgb(17, 146, 244);
+                width: 100%;
+                
+                box-shadow: -20px -20px 20px rgb(14, 14, 15);
+                
+            }
+           .nav2 ul li a{
+                color: rgb(241, 241, 244);
+                font-size: large;
+                width: 10em;
+           }
+           .nav2 ul li a:hover{
+                background-color: rgb(15, 199, 231);
+                
+           }
+            li{
+                list-style: none;
+                float: left;
+                padding: 14px 25px;
+                text-decoration: none;
+                padding-left:30px;
+                padding-right: 40px;
+
+            }
+            li a{
+                text-decoration: none;
+            }
+            .nav1 ul li a:hover{
+                background-color: rgb(187, 171, 190);
+
+            }
+            
+            h1{
+                color: rgb(8, 30, 230);
+                padding-left: 20px;
+                padding-top: 20px;
+                font-size: 50px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+           .ddl{
+            display: none;
+           }
+            .nav2 ul li:hover .ddl{
+                display: block;
+                position: absolute;
+                margin-top:  15px  ;
+                margin-left: -15px  ; 
+                background-color: aqua;
+            }
+            .nav2 ul li:hover .ddl ul {
+                display: block;
+                position: absolute;
+            
+            }
+            .nav2 ul li:hover .ddl ul li {
+                width: 150px;
+                padding: 10px;
+                border-bottom: 1px dotted;
+                background: transparent;
+                background-color: black;
+            }
+           
+            .div2{
+                height:500px;
+                display: flex;
+                width: 100%;
+                position: relative;
+                z-index: -5;
+                
+            }
+            .div2 .new{
+                    position:absolute;
+                    left:40%;
+                    top: 5%;
+                    height:60%;
+                    width:60%;
+                    margin-top: 10%;
+                    background-color:rgba(20, 7, 9, 0.2);
+                    color:rgb(66, 18, 239);
+                    font-weight: bolder;
+                    font-size:x-large;
+
+                }
+                .div2 .im{
+                    position:absolute;
+                    top:50%;
+                    right:40%;
+                    width:20%;
+                    height:30%;
+                } 
+                .p3{
+                    font-size: 30px;
+                    font-weight: bolder;
+                    color: black;
+                    font-family: cursive;
+                }
+                body{
+                    background-image: linear-gradient(to left,rgba(12,100,230,0.4),rgba(50,120,250,0.5));
+                }
+        </style>
+
+    </head>
+    <body >
+       <div  class="div1">
+        
+        <h1>Banasthali Vidyapith</h1>
+        <nav class="nav1">
+            
+            <ul class="m1">
+                <li><a href="news.html">Downloads</a></li>
+                 <li><a href="events.html">Photogallery</a></li>
+                 <li><a href="policies.html">FAQs</a></li>
+                 <li><a href="contact.html">Policies</a></li>
+            </ul>
+            
+        </nav>
+    </div>
+        <nav class="nav2">
+            <ul class="m1">
+                <li><a href="#">About us</a>
+                    <div class="ddl">
+                <ul>
+                    <li><a href="hist.html">History</a></li>
+                    <li><a href="five.html">Five-Fold Education</a></li>
+                </ul> 
+            </div>
+            </li>
+                 <li><a href="#">School education</a>
+                    <div class="ddl">
+                        <ul>
+                            <li><a href="">Features</a></li>
+                            <li><a href="">Addmissions</a></li>
+                            <li><a href="">Fee Submission</a></li>
+                        </ul>
+                        </div>
+                </li>
+                 <li><a href="higher.html">Higher Education</a>
+                    <div class="ddl">
+                        <ul>
+                            <li><a href="">Features</a></li>
+                            <li><a href="">Addmissions</a></li>
+                            <li><a href="">Fee Submission</a></li>
+                            <li><a href="">Courses</a></li>
+                        </ul>
+                        </div>
+                </li>
+               
+            </ul>
+        </nav>
+        <div class="div2" >
+            <img src="ad.png">
+            <div class="new">
+               
+                <p class="p3">Banasthali Vidyapith aims at the synthesis of spiritual values and scientific achievements of both the East and the West.
+                    <b>Banasthali Vidyapith is a fully residential women's higher education institute which offers an integrated system extending from the primary to the Ph.D. level.</b>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

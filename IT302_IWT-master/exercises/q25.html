@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <style>
+            div{
+                background-color: #202020;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                flex-direction: column;
+                position: relative;
+                color: aliceblue;
+                font-size: larger;
+           
+
+               
+            }
+            label{
+                padding: 10px 10px 10px 10px;
+                margin-right: 40px;
+               
+            }
+            input{
+                background-color: aquamarine;
+                padding: 10px 10px 10px 10px;
+                margin-bottom: 8px;
+            }
+            textarea{
+                background-color: aquamarine;
+                padding: 10px 10px 10px 10px;
+                margin-bottom: 8px;
+             
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Registration form</h1>
+            <form>
+                <label>First Name</label>
+                <input type="text" name="fname" >
+                <br>
+                <label>Last Name</label>
+                <input type="text" name="lname">
+                <br>
+                <label>Password</label>
+                <input type="password" name="pass" >
+                <br>
+                <label>Confirm Password</label>
+                <input type="password" name="pass" >
+                <br>
+                <label>User ID</label>
+                <input type="text" name="ui">
+                <br>
+                <label>Address</label>
+                <textarea></textarea>
+                <br>
+                <label>E-mail</label>
+                <input type="email" name="em">
+                <br>
+                <label>Contact Number</label>
+                <input type="text" name="cn">
+                <br>
+                <input type="submit" name="submit" onclick="fv()">
+            </form>
+           
+        </div>
+    </body>
+        <script>
+            var fname= new String(document.forms[0].elements[1]);
+            if(fname.length===0){
+                alert("Enter a valid name");
+            }
+            var lname=new String(document.forms[0].elements[3]);
+            if(lname!='^[A-Za-z]$') 
+            {
+                alert("Not a valid last name")
+            }
+            var pass=new String(document.forms[0].elements[5]);
+            if(pass!='[0-9a-zA-Z\w]{8}'){
+                alert("Not a valid password");
+            }
+            var cpass=new String(document.forms[0].elements[7]); 
+            if(cpass===pass){
+                    alert("Password didn't match.Try Again");
+                    (document.forms[0].elements[7]).innerHTML="";
+                }
+            
+            var addr=new String(document.forms[0].elements[11]);
+            function fv(){
+                if(addr.length==0){
+                    alert("Enter a valid address!");
+                }
+                
+
+            }
+        </script>
+</html>
